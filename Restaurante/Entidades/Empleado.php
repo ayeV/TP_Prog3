@@ -54,6 +54,56 @@ include_once("DB/AccesoDatos.php");
 
     }
 
+    public static function Login($user, $password)
+    {
+        $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
+
+        $consulta = $objetoAccesoDato->RetornarConsulta("SELECT te.descripcion as tipo_empleado, em.ID_Empleado, nombre_empleado FROM empleados em
+                                                            INNER JOIN tipoempleado te  on em.ID_tipo_empleado = te.ID_tipo_empleado 
+                                                            WHERE em.usuario = :user AND em.clave = :password AND em.estado = 'A'");
+
+        $consulta->execute(array(":user" => $user, ":password" => $password));
+
+        $resultado = $consulta->fetch();
+        return $resultado;
+    }
+     ///Actualiza la ultima fecha de logueo de los empleados.
+     public static function ActualizarFechaLogin($id_empleado)
+     {
+         $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
+ 
+         date_default_timezone_set("America/Argentina/Buenos_Aires");
+         $fecha = date('Y-m-d H:i:s');
+ 
+         $consulta = $objetoAccesoDato->RetornarConsulta("UPDATE empleados SET fecha_ultimo_login = :fecha WHERE ID_Empleado = :id");
+ 
+         $consulta->bindValue(':fecha', $fecha, PDO::PARAM_STR);
+         $consulta->bindValue(':id', $id_empleado, PDO::PARAM_INT);
+ 
+         $consulta->execute();
+     }
+
+      ///Baja de empleados.
+    public static function Baja($id_empleado)
+    {
+        try {
+            $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
+
+            $consulta = $objetoAccesoDato->RetornarConsulta("UPDATE empleados SET estado = 'B' WHERE ID_Empleado = :id");
+
+            $consulta->bindValue(':id', $id_empleado, PDO::PARAM_INT);
+
+            $consulta->execute();
+
+            $respuesta = array("Estado" => "OK", "Mensaje" => "Empleado dado de baja correctamente.");
+        } catch (Exception $e) {
+            $mensaje = $e->getMessage();
+            $respuesta = array("Estado" => "ERROR", "Mensaje" => "$mensaje");
+        }
+        finally {
+            return $respuesta;
+        }
+    }
 
 
 }

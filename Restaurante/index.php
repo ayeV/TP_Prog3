@@ -12,6 +12,7 @@ $app = new \Slim\App([
     ]
 ]);
 
+$app->post('/empleados/login[/]', \EmpleadoAPI::class . ':LoginEmpleado');  
 $app->post('/empleados/registrarEmpleado[/]', \EmpleadoAPI::class . ':RegistrarEmpleado');
 
 
