@@ -38,5 +38,49 @@ class EmpleadoApi extends Empleado
         $newResponse = $response->withJson($respuesta, 200);
         return $newResponse;
     }   
+
+    public function ModificarEmpleado($request, $response, $args)
+    {
+        $parametros = $request->getParsedBody();
+        $usuario = $parametros["usuario"];
+        $id = $parametros["id"];
+        $nombre = $parametros["nombre"];
+        $tipo = $parametros["tipo"];
+
+        $respuesta = Empleado::Modificar($id, $usuario, $nombre, $tipo);
+        $newResponse = $response->withJson($respuesta, 200);
+        return $newResponse;
+    }
+
+    ///Lista todos los empleados
+    public function ListarEmpleados($request, $response, $args)
+    {
+        $respuesta = Empleado::Listar();
+        $newResponse = $response->withJson($respuesta, 200);
+        return $newResponse;
+    }
+
+    ///Da de baja un empleado.
+    public function BajaEmpleado($request, $response, $args)
+    {
+        $id = $args["id"];
+        $respuesta = Empleado::Baja($id);
+        $newResponse = $response->withJson($respuesta, 200);
+        return $newResponse;
+    }
+
+    ///Suspende un empleado.
+    public function SuspenderEmpleado($request, $response, $args)
+    {
+        $id = $args["id"];
+        $respuesta = Empleado::Suspender($id);
+        $newResponse = $response->withJson($respuesta, 200);
+        return $newResponse;
+    }
+
+
+
+
+
 }
     ?>
