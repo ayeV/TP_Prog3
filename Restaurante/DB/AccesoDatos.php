@@ -7,7 +7,7 @@ class AccesoDatos
     private function __construct()
     {
         try {
-            $this->_objetoPDO = new PDO('mysql:host=localhost;dbname=lacomanda;charset=utf8', 'root', '', array(PDO::ATTR_EMULATE_PREPARES => false,PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+            $this->_objetoPDO = new PDO('mysql:host=fdb26.awardspace.net;dbname=3073018_lacomanda;charset=utf8', '3073018_lacomanda', 'lacomandapasswd1', array(PDO::ATTR_EMULATE_PREPARES => false,PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
  
             $this->_objetoPDO->exec("SET CHARACTER SET utf8");
  

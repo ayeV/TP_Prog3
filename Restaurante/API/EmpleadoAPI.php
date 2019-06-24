@@ -78,6 +78,56 @@ class EmpleadoApi extends Empleado
         return $newResponse;
     }
 
+       ///Cambiar contraseña
+       public function CambiarClaveEmpleado($request, $response, $args)
+       {
+           $parametros = $request->getParsedBody();
+           $clave = $parametros["clave"];
+           $payload = $request->getAttribute("payload")["Payload"];
+           $id = $payload->id;
+           $respuesta = Empleado::CambiarClave($id, $clave);
+           $newResponse = $response->withJson($respuesta, 200);
+           return $newResponse;
+       }
+   
+       ///Cantidad de operaciones de todos por sector
+       public function ObtenerCantidadOperacionesPorSector($request, $response, $args)
+       {
+           $respuesta = Empleado::CantidadOperacionesPorSector();
+           $newResponse = $response->withJson($respuesta, 200);
+           return $newResponse;
+       }
+   
+       ///Cantidad de operaciones de todos por sector
+       public function ObtenerCantidadOperacionesEmpleadosPorSector($request, $response, $args)
+       {
+           $parametros = $request->getParsedBody();
+           $sector = $parametros["sector"];
+           $respuesta = Empleado::CantidadOperacionesEmpleadosPorSector($sector);
+           $newResponse = $response->withJson($respuesta, 200);
+           return $newResponse;
+       }
+   
+       ///Lista todos los empleados entre las fechas de login
+       public function ListarEmpleadosEntreFechasLogin($request,$response,$args){
+           $parametros = $request->getParsedBody();
+           $fecha1 = $parametros["fecha1"];
+           $fecha2 = $parametros["fecha2"];
+           $respuesta = Empleado::ListarEntreFechasLogin($fecha1,$fecha2);
+           $newResponse = $response->withJson($respuesta,200);
+           return $newResponse;
+       } 
+   
+       ///Lista todos los empleados entre las fechas de registro
+       public function ListarEmpleadosEntreFechasRegistro($request,$response,$args){
+           $parametros = $request->getParsedBody();
+           $fecha1 = $parametros["fecha1"];
+           $fecha2 = $parametros["fecha2"];
+           $respuesta = Empleado::ListarEntreFechasRegistro($fecha1,$fecha2);
+           $newResponse = $response->withJson($respuesta,200);
+           return $newResponse;
+       } 
+
 
 
 
