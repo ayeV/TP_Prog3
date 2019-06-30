@@ -1,5 +1,5 @@
 <?php
-class PedidoMiddleware
+class PedidoMW
 {
     public static function ValidarTomarPedido($request, $response, $next)
     {
@@ -9,7 +9,7 @@ class PedidoMiddleware
         $payload = $request->getAttribute("payload")["Payload"];
 
         if ($pedido == null) {
-            $retorno = array("Estado" => "ERROR", "Mensaje" => "Codigo incorrecto.");
+            $retorno = array("Estado" => "ERROR", "Mensaje" => "Codigo incorrecto.".$codigo);
             $newResponse = $response->withJson($retorno, 200);
         } else if ($pedido[0]->estado != 'Pendiente') {
             $retorno = array("Estado" => "ERROR", "Mensaje" => "Este pedido no se encuentra pendiente.");

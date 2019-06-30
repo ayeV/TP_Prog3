@@ -55,7 +55,7 @@ class Mesa
         try {
             $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
 
-            $consulta = $objetoAccesoDato->RetornarConsulta("SELECT codigo_mesa as codigo, estado, foto FROM mesa
+            $consulta = $objetoAccesoDato->RetornarConsulta("SELECT codigo_mesa as codigo, estado, foto FROM mesas
                                                             WHERE codigo_mesa = :codigo");
 
             $consulta->bindValue(':codigo', $codigoMesa, PDO::PARAM_STR);
@@ -77,7 +77,7 @@ class Mesa
         try {
             $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
 
-            $consulta = $objetoAccesoDato->RetornarConsulta("DELETE FROM mesa WHERE codigo_mesa = :codigo");
+            $consulta = $objetoAccesoDato->RetornarConsulta("DELETE FROM mesas WHERE codigo_mesa = :codigo");
 
             $consulta->bindValue(':codigo', $codigo, PDO::PARAM_STR);
 
@@ -99,7 +99,7 @@ class Mesa
         try {
             $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
 
-            $consulta = $objetoAccesoDato->RetornarConsulta("UPDATE mesa SET foto = :rutaFoto WHERE codigo_mesa = :codigo");
+            $consulta = $objetoAccesoDato->RetornarConsulta("UPDATE mesas SET foto = :rutaFoto WHERE codigo_mesa = :codigo");
 
             $consulta->bindValue(':codigo', $codigoMesa, PDO::PARAM_STR);
             $consulta->bindValue(':rutaFoto', $rutaFoto, PDO::PARAM_STR);
@@ -122,7 +122,7 @@ class Mesa
         try {
             $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
 
-            $consulta = $objetoAccesoDato->RetornarConsulta("UPDATE mesa SET estado = 'Con cliente esperando pedido' WHERE codigo_mesa = :codigo");
+            $consulta = $objetoAccesoDato->RetornarConsulta("UPDATE mesas SET estado = 'Con cliente esperando pedido' WHERE codigo_mesa = :codigo");
 
             $consulta->bindValue(':codigo', $codigoMesa, PDO::PARAM_STR);
 
@@ -145,7 +145,7 @@ class Mesa
         try {
             $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
 
-            $consulta = $objetoAccesoDato->RetornarConsulta("UPDATE mesa SET estado = 'Con clientes comiendo' WHERE codigo_mesa = :codigo");
+            $consulta = $objetoAccesoDato->RetornarConsulta("UPDATE mesas SET estado = 'Con clientes comiendo' WHERE codigo_mesa = :codigo");
 
             $consulta->bindValue(':codigo', $codigoMesa, PDO::PARAM_STR);
 
@@ -167,7 +167,7 @@ class Mesa
         try {
             $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
 
-            $consulta = $objetoAccesoDato->RetornarConsulta("UPDATE mesa SET estado = 'Con clientes pagando' WHERE codigo_mesa = :codigo");
+            $consulta = $objetoAccesoDato->RetornarConsulta("UPDATE mesas SET estado = 'Con clientes pagando' WHERE codigo_mesa = :codigo");
 
             $consulta->bindValue(':codigo', $codigoMesa, PDO::PARAM_STR);
 
@@ -189,7 +189,7 @@ class Mesa
         try {
             $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
 
-            $consulta = $objetoAccesoDato->RetornarConsulta("UPDATE mesa SET estado = 'Cerrada' WHERE codigo_mesa = :codigo");
+            $consulta = $objetoAccesoDato->RetornarConsulta("UPDATE mesas SET estado = 'Cerrada' WHERE codigo_mesa = :codigo");
 
             $consulta->bindValue(':codigo', $codigoMesa, PDO::PARAM_STR);
 
@@ -238,7 +238,7 @@ class Mesa
         try {
             $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
 
-            $consulta = $objetoAccesoDato->RetornarConsulta("SELECT f.codigoMesa, count(f.codigoMesa) as cantidad_usos FROM factura f 
+            $consulta = $objetoAccesoDato->RetornarConsulta("SELECT f.codigoMesa, count(f.codigoMesa) as cantidad_usos FROM facturas f 
                                                             GROUP BY(f.codigoMesa) HAVING count(f.codigoMesa) = 
                                                             (SELECT MAX(sel.cantidad_usos) FROM 
                                                             (SELECT count(f2.codigoMesa) as cantidad_usos FROM factura f2 GROUP BY(f2.codigoMesa)) sel);");
@@ -262,7 +262,7 @@ class Mesa
         try {
             $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
 
-            $consulta = $objetoAccesoDato->RetornarConsulta("SELECT f.codigoMesa, count(f.codigoMesa) as cantidad_usos FROM factura f 
+            $consulta = $objetoAccesoDato->RetornarConsulta("SELECT f.codigoMesa, count(f.codigoMesa) as cantidad_usos FROM facturas f 
                                                             GROUP BY(f.codigoMesa) HAVING count(f.codigoMesa) = 
                                                             (SELECT MIN(sel.cantidad_usos) FROM 
                                                             (SELECT count(f2.codigoMesa) as cantidad_usos FROM factura f2 GROUP BY(f2.codigoMesa)) sel);");
@@ -285,7 +285,7 @@ class Mesa
         try {
             $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
 
-            $consulta = $objetoAccesoDato->RetornarConsulta("SELECT f.codigoMesa, SUM(f.importe) as facturacion_total FROM factura f 
+            $consulta = $objetoAccesoDato->RetornarConsulta("SELECT f.codigoMesa, SUM(f.importe) as facturacion_total FROM facturas f 
                                                             GROUP BY(f.codigoMesa) HAVING SUM(f.importe) = 
                                                             (SELECT MAX(sel.facturacion_total) FROM
                                                             (SELECT SUM(f2.importe) as facturacion_total FROM factura f2 GROUP BY(f2.codigoMesa)) sel);");
@@ -308,7 +308,7 @@ class Mesa
         try {
             $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
 
-            $consulta = $objetoAccesoDato->RetornarConsulta("SELECT f.codigoMesa, SUM(f.importe) as facturacion_total FROM factura f 
+            $consulta = $objetoAccesoDato->RetornarConsulta("SELECT f.codigoMesa, SUM(f.importe) as facturacion_total FROM facturas f 
                                                             GROUP BY(f.codigoMesa) HAVING SUM(f.importe) = 
                                                             (SELECT MIN(sel.facturacion_total) FROM
                                                             (SELECT SUM(f2.importe) as facturacion_total FROM factura f2 GROUP BY(f2.codigoMesa)) sel);");
@@ -331,7 +331,7 @@ class Mesa
         try {
             $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
 
-            $consulta = $objetoAccesoDato->RetornarConsulta("SELECT f.codigoMesa, f.importe as importe FROM factura f WHERE f.importe = 
+            $consulta = $objetoAccesoDato->RetornarConsulta("SELECT f.codigoMesa, f.importe as importe FROM facturas f WHERE f.importe = 
                                                             (SELECT MAX(f2.importe) as importe FROM factura f2 ) GROUP BY (f.codigoMesa);");
 
             $consulta->execute();
@@ -353,7 +353,7 @@ class Mesa
         try {
             $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
 
-            $consulta = $objetoAccesoDato->RetornarConsulta("SELECT f.codigoMesa, f.importe as importe FROM factura f WHERE f.importe = 
+            $consulta = $objetoAccesoDato->RetornarConsulta("SELECT f.codigoMesa, f.importe as importe FROM facturas f WHERE f.importe = 
                                                             (SELECT MIN(f2.importe) as importe FROM factura f2 ) GROUP BY (f.codigoMesa);");
 
             $consulta->execute();
@@ -374,7 +374,7 @@ class Mesa
         try {
             $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
 
-            $consulta = $objetoAccesoDato->RetornarConsulta("SELECT f.codigoMesa, AVG(f.puntuacion_mesa) as puntuacion_promedio FROM encuesta f 
+            $consulta = $objetoAccesoDato->RetornarConsulta("SELECT f.codigoMesa, AVG(f.puntuacion_mesa) as puntuacion_promedio FROM encuestas f 
                                                             GROUP BY(f.codigoMesa) HAVING AVG(f.puntuacion_mesa) = 
                                                             (SELECT MAX(sel.puntuacion_promedio) FROM
                                                             (SELECT AVG(f2.puntuacion_mesa) as puntuacion_promedio FROM encuesta f2 GROUP BY(f2.codigoMesa)) sel);");
@@ -397,7 +397,7 @@ class Mesa
         try {
             $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
 
-            $consulta = $objetoAccesoDato->RetornarConsulta("SELECT f.codigoMesa, AVG(f.puntuacion_mesa) as puntuacion_promedio FROM encuesta f 
+            $consulta = $objetoAccesoDato->RetornarConsulta("SELECT f.codigoMesa, AVG(f.puntuacion_mesa) as puntuacion_promedio FROM encuestas f 
                                                             GROUP BY(f.codigoMesa) HAVING AVG(f.puntuacion_mesa) = 
                                                             (SELECT MIN(sel.puntuacion_promedio) FROM
                                                             (SELECT AVG(f2.puntuacion_mesa) as puntuacion_promedio FROM encuesta f2 GROUP BY(f2.codigoMesa)) sel);");
@@ -421,7 +421,7 @@ class Mesa
         try {
             $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
 
-            $consulta = $objetoAccesoDato->RetornarConsulta("SELECT f.codigoMesa, f.fecha, f.importe FROM factura f 
+            $consulta = $objetoAccesoDato->RetornarConsulta("SELECT f.codigoMesa, f.fecha, f.importe FROM facturas f 
                                                             WHERE f.codigoMesa = :codigoMesa AND f.fecha BETWEEN :fecha1 AND :fecha2;");
 
             $consulta->bindValue(':codigoMesa', $codigoMesa, PDO::PARAM_STR);

@@ -32,7 +32,7 @@ class MesaApi extends Mesa{
     public function ActualizarFotoMesa($request, $response, $args){
         $parametros = $request->getParsedBody();
         $files = $request->getUploadedFiles();
-        $codigoMesa = $parametros["codigo"];
+        $codigoMesa = $parametros["codigoMesa"];
         $foto = $files["foto"];
  
         //Consigo la extensión de la foto.  

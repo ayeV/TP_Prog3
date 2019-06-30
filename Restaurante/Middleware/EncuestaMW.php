@@ -1,5 +1,5 @@
 <?php
-    class EncuestaMiddleware{
+    class EncuestaMW{
         ///Valida los datos de la encuesta
         public static function ValidarEncuesta($request, $response, $next)
         {

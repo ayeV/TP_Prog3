@@ -7,7 +7,7 @@ class PedidoApi extends Pedido{
         $parametros = $request->getParsedBody();
         $id_mesa = $parametros["id_mesa"];        
         $id_menu  = $parametros["id_menu"];
-        $nombre_cliente = $parametros["cliente"];
+        $nombre_cliente = $parametros["nombre_cliente"];
         $payload = $request->getAttribute("payload")["Payload"];
         $id_mozo = $payload->id;       
 
