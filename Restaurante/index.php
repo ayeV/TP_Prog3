@@ -7,6 +7,8 @@ include_once './API/EmpleadoAPI.php';
 include_once './API/MesaAPI.php';
 include_once './API/MenuAPI.php';
 include_once './API/PedidoAPI.php';
+include_once './API/EncuestaAPI.php';
+include_once './API/FacturaAPI.php';
 
 include_once './Middleware/EmpleadoMW.php';
 include_once './Middleware/OperacionMW.php';
@@ -39,12 +41,12 @@ $this->get('/listar[/]', \EmpleadoAPI::class . ':ListarEmpleados')
 ->add(\EmpleadoMW::class . ':ValidarToken'); 
 
 //delete
-$this->delete('/{id}[/]', \EmpleadoAPI::class . ':BajaEmpleado')
+$this->delete('/{usuario}[/]', \EmpleadoAPI::class . ':BajaEmpleado')
 ->add(\OperacionMW::class . ':SumarOperacionAEmpleado')
 ->add(\EmpleadoMW::class . ':ValidarSocio')
 ->add(\EmpleadoMW::class . ':ValidarToken'); 
 
-$this->delete('/suspender/{id}[/]', \EmpleadoAPI::class . ':SuspenderEmpleado')
+$this->delete('/suspender/{usuario}[/]', \EmpleadoAPI::class . ':SuspenderEmpleado')
 ->add(\OperacionMW::class . ':SumarOperacionAEmpleado')
 ->add(\EmpleadoMW::class . ':ValidarSocio')
 ->add(\EmpleadoMW::class . ':ValidarToken'); 
@@ -247,5 +249,36 @@ $this->get('/MenosVendido[/]', \PedidoAPI::class . ':LoMenosVendido')
 });
 
 
+
+$app->group('/encuesta', function () {
+    $this->post('/registrar[/]', \EncuestaAPI::class . ':RegistrarEncuesta')
+    ->add(\EncuestaMiddleware::class . ':ValidarEncuesta'); 
+
+    $this->get('/listar[/]', \EncuestaAPI::class . ':ListarEncuestas')
+    ->add(\EmpleadoMW::class . ':ValidarSocio')
+    ->add(\EmpleadoMW::class . ':ValidarToken'); 
+
+    $this->post('/listarEntreFechas[/]', \EncuestaAPI::class . ':ListarEncuestasEntreFechas')
+    ->add(\EmpleadoMW::class . ':ValidarSocio')
+    ->add(\EmpleadoMW::class . ':ValidarToken'); 
+});
+
+
+$app->group('/factura', function () {
+    
+
+
+
+    $this->get('/listarVentasPDF[/]', \FacturaAPI::class . ':ListarVentasPDF')
+    ->add(\EmpleadoMW::class . ':ValidarSocio')
+    ->add(\EmpleadoMW::class . ':ValidarToken');  
+
+    $this->get('/listarVentasExcel[/]', \FacturaAPI::class . ':ListarVentasExcel')
+    ->add(\EmpleadoMW::class . ':ValidarSocio')
+    ->add(\EmpleadoMW::class . ':ValidarToken');  
+
+    $this->post('/listarEntreFechas[/]', \FacturaAPI::class . ':ListarFacturasEntreFechas')
+    ->add(\EmpleadoMW::class . ':ValidarSocio')
+    ->add(\EmpleadoMW::class . ':ValidarToken'); 
+});
 $app->run();
-?>

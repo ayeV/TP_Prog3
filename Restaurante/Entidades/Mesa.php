@@ -19,7 +19,7 @@ class Mesa
 
             $consulta->execute();
 
-            $respuesta = array("Estado" => "OK", "Mensaje" => "Mesa registrada correctamente.");
+            $respuesta = array("Estado" => "OK", "Mensaje" => "Mesa registrada correctamente.Codigo: ".$codigo);
         } catch (Exception $e) {
             $mensaje = $e->getMessage();
             $respuesta = array("Estado" => "ERROR", "Mensaje" => "$mensaje");

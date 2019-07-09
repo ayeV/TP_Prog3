@@ -4,6 +4,7 @@
             $foto->moveTo($ruta);
         }
 
+        
         public static function ObtenerExtension($foto){
             $mediaType = $foto->getClientMediaType();
             $retorno = "";

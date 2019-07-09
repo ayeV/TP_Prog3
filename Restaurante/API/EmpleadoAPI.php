@@ -63,8 +63,8 @@ class EmpleadoApi extends Empleado
     ///Da de baja un empleado.
     public function BajaEmpleado($request, $response, $args)
     {
-        $id = $args["id"];
-        $respuesta = Empleado::Baja($id);
+        $usuario = $args["usuario"];
+        $respuesta = Empleado::Baja($usuario);
         $newResponse = $response->withJson($respuesta, 200);
         return $newResponse;
     }
@@ -72,8 +72,8 @@ class EmpleadoApi extends Empleado
     ///Suspende un empleado.
     public function SuspenderEmpleado($request, $response, $args)
     {
-        $id = $args["id"];
-        $respuesta = Empleado::Suspender($id);
+        $usuario = $args["usuario"];
+        $respuesta = Empleado::Suspender($usuario);
         $newResponse = $response->withJson($respuesta, 200);
         return $newResponse;
     }

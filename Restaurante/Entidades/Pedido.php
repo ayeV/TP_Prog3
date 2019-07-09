@@ -55,7 +55,7 @@ class Pedido
                 $consulta->bindValue(':codigo', $codigo, PDO::PARAM_STR);
                 $consulta->execute();
 
-                $respuesta = array("Estado" => "OK", "Mensaje" => "Pedido registrado correctamente."."Codigo: ".$codigo);
+                $respuesta = array("Estado" => "OK", "Mensaje" => "Pedido registrado correctamente."."Codigo: ".$codigo."idMozo:".$id_mozo."idMesa: ".$id_mesa."idMenu: ".$id_menu);
             } else {
                 $respuesta = array("Estado" => "ERROR", "Mensaje" => "Alguno de los ID ingresados es inválido.");
             }
@@ -187,7 +187,7 @@ class Pedido
                                                         me.nombre as descripcion, p.id_menu, te.descripcion as sector, p.nombre_cliente,
                                                         em.nombre_empleado as nombre_mozo, p.id_mozo, p.id_encargado, p.hora_inicial, p.hora_entrega_estimada,
                                                         p.hora_entrega_real, p.fecha, me.precio as importe
-                                                        FROM pedido p
+                                                        FROM pedidos p
                                                         INNER JOIN estado_pedidos ep ON ep.id_estado_pedidos = p.id_estado_pedidos
                                                         INNER JOIN menu me ON me.id = p.id_menu
                                                         INNER JOIN tipoempleado te ON te.id_tipo_empleado = me.id_sector 
@@ -232,7 +232,7 @@ class Pedido
                                                             me.nombre as descripcion, p.id_menu, te.descripcion as sector, p.nombre_cliente,
                                                             em.nombre_empleado as nombre_mozo, p.id_mozo, p.id_encargado, p.hora_inicial, p.hora_entrega_estimada,
                                                             p.hora_entrega_real, p.fecha, me.precio as importe
-                                                            FROM pedido p
+                                                            FROM pedidos p
                                                             INNER JOIN estado_pedidos ep ON ep.id_estado_pedidos = p.id_estado_pedidos
                                                             INNER JOIN menu me ON me.id = p.id_menu
                                                             INNER JOIN tipoempleado te ON te.id_tipo_empleado = me.id_sector 
@@ -246,7 +246,7 @@ class Pedido
                                                             me.nombre as descripcion, p.id_menu, te.descripcion as sector, p.nombre_cliente,
                                                             em.nombre_empleado as nombre_mozo, p.id_mozo, p.id_encargado, p.hora_inicial, p.hora_entrega_estimada,
                                                             p.hora_entrega_real, p.fecha, me.precio as importe
-                                                            FROM pedido p
+                                                            FROM pedidos p
                                                             INNER JOIN estado_pedidos ep ON ep.id_estado_pedidos = p.id_estado_pedidos
                                                             INNER JOIN menu me ON me.id = p.id_menu
                                                             INNER JOIN tipoempleado te ON te.id_tipo_empleado = me.id_sector 
@@ -278,7 +278,7 @@ class Pedido
                                                         me.nombre as descripcion, p.id_menu, te.descripcion as sector, p.nombre_cliente,
                                                         em.nombre_empleado as nombre_mozo, p.id_mozo, p.id_encargado, p.hora_inicial, p.hora_entrega_estimada,
                                                         p.hora_entrega_real, p.fecha, me.precio as importe
-                                                        FROM pedido p
+                                                        FROM pedidos p
                                                         INNER JOIN estado_pedidos ep ON ep.id_estado_pedidos = p.id_estado_pedidos
                                                         INNER JOIN menu me ON me.id = p.id_menu
                                                         INNER JOIN tipoempleado te ON te.id_tipo_empleado = me.id_sector 

@@ -1,0 +1,8 @@
+3073018/ayelenvaldez07@hotmail.com //ayelen94@
+ayelen94
+pass ftp: tpprog03odiophp
+
+bd
+name:
+3073018_lacomanda
+psswd: lacomandapasswd1

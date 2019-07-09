@@ -42,7 +42,7 @@ class Empleado
 
                 $consulta->execute();
 
-                $respuesta = array("Estado" => "OK", "Mensaje" => "Empleado registrado correctamente.");
+                $respuesta = array("Estado" => "OK", "Mensaje" => "Empleado registrado correctamente.Usuario: ".$usuario);
             } else {
                 $respuesta = array("Estado" => "ERROR", "Mensaje" => "Debe ingresar un tipo de empleado valido");
             }
@@ -84,14 +84,14 @@ class Empleado
     }
 
     ///Baja de empleados.
-    public static function Baja($id_empleado)
+    public static function Baja($usuario)
     {
         try {
             $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
 
-            $consulta = $objetoAccesoDato->RetornarConsulta("UPDATE empleados SET estado = 'B' WHERE ID_empleado = :id_empleado");
+            $consulta = $objetoAccesoDato->RetornarConsulta("UPDATE empleados SET estado = 'B' WHERE usuario = :usuario");
 
-            $consulta->bindValue(':id_empleado', $id_empleado, PDO::PARAM_INT);
+            $consulta->bindValue(':usuario', $usuario, PDO::PARAM_INT);
 
             $consulta->execute();
 
@@ -104,14 +104,14 @@ class Empleado
         }
     }
 
-    public static function Suspender($id_empleado)
+    public static function Suspender($usuario)
     {
         try {
             $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
 
-            $consulta = $objetoAccesoDato->RetornarConsulta("UPDATE empleados SET estado = 'S' WHERE ID_empleado = :id_empleado");
+            $consulta = $objetoAccesoDato->RetornarConsulta("UPDATE empleados SET estado = 'S' WHERE usuario = :usuario");
 
-            $consulta->bindValue(':id_empleado', $id_empleado, PDO::PARAM_INT);
+            $consulta->bindValue(':usuario', $usuario, PDO::PARAM_INT);
 
             $consulta->execute();
 

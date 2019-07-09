@@ -1,7 +1,8 @@
 <?php
 include_once("DB/AccesoDatos.php");
 include_once("Reportes/FPDF/fpdf.php");
-include_once("Reportes/PhpSpreadsheet");
+//include_once("Reportes/PhpSpreadsheet");
+
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
@@ -29,7 +30,7 @@ class Factura
 
             $consulta->execute();
 
-            $respuesta = array("Estado" => "OK", "Mensaje" => "Factura generada correctamente.");
+            $respuesta = array("Estado" => "OK", "Mensaje" => "Factura generada correctamente.Importe: ".$importe);
         } catch (Exception $e) {
             $mensaje = $e->getMessage();
             $respuesta = array("Estado" => "ERROR", "Mensaje" => "$mensaje");
