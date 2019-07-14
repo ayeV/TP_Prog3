@@ -1,10 +1,12 @@
 <?php
-include_once("DB/AccesoDatos.php");
-include_once("Reportes/FPDF/fpdf.php");
-//include_once("Reportes/PhpSpreadsheet");
 
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+include_once("DB/AccesoDatos.php");
+include_once("Reportes/FPDF/fpdf.php");
+//include_once("Reportes/PhpSpreadsheet/src/PhpSpreadsheet/Spreadsheet.php");
+
+require 'vendor/autoload.php';
 
 class Factura
 {
@@ -144,8 +146,9 @@ class Factura
         header('Content-Disposition: attachment;filename-"./Reportes/Ventas.xlsx"');
         header('Cache-Control: max-age=0');
 
-        $writer = IOFactory::createWriter($excel, 'Xlsx');
-        $writer->save("./Reportes/Ventas.xlsx");
+       // $writer = IOFactory::createWriter($excel, 'Xlsx');
+        $writer = new Xlsx($excel);
+        $writer->save("./Reportes/VentasExcel.xlsx");
         return array("Estado" => "OK", "Mensaje" => "Excel generado correctamente.");
 
 

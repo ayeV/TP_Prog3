@@ -214,6 +214,7 @@ $this->post('/listarTodosPorFecha[/]', \PedidoAPI::class . ':ListarTodosLosPedid
 ->add(\EmpleadoMW::class . ':ValidarToken');  
 
 $this->get('/listarPorMesa/{codigoMesa}[/]', \PedidoAPI::class . ':ListarTodosLosPedidosPorMesa');
+
 $this->get('/listarActivos[/]', \PedidoAPI::class . ':ListarPedidosActivos')
 ->add(\EmpleadoMW::class . ':ValidarToken');  
 
@@ -252,7 +253,7 @@ $this->get('/MenosVendido[/]', \PedidoAPI::class . ':LoMenosVendido')
 
 $app->group('/encuesta', function () {
     $this->post('/registrar[/]', \EncuestaAPI::class . ':RegistrarEncuesta')
-    ->add(\EncuestaMiddleware::class . ':ValidarEncuesta'); 
+    ->add(\EncuestaMW::class . ':ValidarEncuesta'); 
 
     $this->get('/listar[/]', \EncuestaAPI::class . ':ListarEncuestas')
     ->add(\EmpleadoMW::class . ':ValidarSocio')

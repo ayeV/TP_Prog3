@@ -217,6 +217,7 @@ class Mesa
                 if($pedido->estado == "Entregado"){
                     $importeFinal += $pedido->importe;
                 }
+                
             }
 
             Factura::Generar($importeFinal,$codigoMesa);

@@ -55,7 +55,7 @@ class Pedido
                 $consulta->bindValue(':codigo', $codigo, PDO::PARAM_STR);
                 $consulta->execute();
 
-                $respuesta = array("Estado" => "OK", "Mensaje" => "Pedido registrado correctamente."."Codigo: ".$codigo."idMozo:".$id_mozo."idMesa: ".$id_mesa."idMenu: ".$id_menu);
+                $respuesta = array("Estado" => "OK", "Mensaje" => "Pedido registrado correctamente."."Codigo:  ".$codigo." idMozo: ".$id_mozo." idMesa:  ".$id_mesa." idMenu: ".$id_menu);
             } else {
                 $respuesta = array("Estado" => "ERROR", "Mensaje" => "Alguno de los ID ingresados es inválido.");
             }
@@ -158,7 +158,7 @@ class Pedido
                                                         me.nombre as descripcion, p.id_menu, te.descripcion as sector, p.nombre_cliente,
                                                         em.nombre_empleado as nombre_mozo, p.id_mozo, p.id_encargado, p.hora_inicial, p.hora_entrega_estimada,
                                                         p.hora_entrega_real, p.fecha, me.precio as importe
-                                                        FROM pedido p
+                                                        FROM pedidos p
                                                         INNER JOIN estado_pedidos ep ON ep.id_estado_pedidos = p.id_estado_pedidos
                                                         INNER JOIN menu me ON me.id = p.id_menu
                                                         INNER JOIN tipoempleado te ON te.id_tipo_empleado = me.id_sector 
@@ -441,10 +441,10 @@ class Pedido
         try {
             $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
 
-            $consulta = $objetoAccesoDato->RetornarConsulta("SELECT p.id_menu, m.nombre, count(p.id_menu) as cantidad_ventas FROM pedidos p INNER JOIN menu m
+            $consulta = $objetoAccesoDato->RetornarConsulta("SELECT p.id_menu as idMenu, m.nombre as nombre, count(p.id_menu) as cantidad_ventas FROM pedidos p INNER JOIN menu m
                                                             on m.id = p.id_menu GROUP BY(id_menu) HAVING count(p.id_menu) = 
                                                             (SELECT MAX(sel.cantidad_ventas) FROM 
-                                                            (SELECT count(p.id_menu) as cantidad_ventas FROM pedido p GROUP BY(id_menu)) sel);");
+                                                            (SELECT count(p.id_menu) as cantidad_ventas FROM pedidos p GROUP BY(id_menu)) sel);");
 
             $consulta->execute();
 
@@ -467,7 +467,7 @@ class Pedido
             $consulta = $objetoAccesoDato->RetornarConsulta("SELECT p.id_menu, m.nombre, count(p.id_menu) as cantidad_ventas FROM pedidos p INNER JOIN menu m
                                                             on m.id = p.id_menu GROUP BY(id_menu) HAVING count(p.id_menu) = 
                                                             (SELECT MIN(sel.cantidad_ventas) FROM 
-                                                            (SELECT count(p.id_menu) as cantidad_ventas FROM pedido p GROUP BY(id_menu)) sel);");
+                                                            (SELECT count(p.id_menu) as cantidad_ventas FROM pedidos p GROUP BY(id_menu)) sel);");
 
             $consulta->execute();
 

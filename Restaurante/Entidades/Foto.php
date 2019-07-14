@@ -1,4 +1,6 @@
 <?php
+
+
     class Foto{
         public static function GuardarFoto($foto,$ruta){
             $foto->moveTo($ruta);
@@ -22,5 +24,6 @@
 
             return $retorno;
         }
+
+        
     }
-?>

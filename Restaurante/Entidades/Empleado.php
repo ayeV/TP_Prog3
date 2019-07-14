@@ -210,7 +210,7 @@ class Empleado
           try {
               $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
   
-              $consulta = $objetoAccesoDato->RetornarConsulta("SELECT te.descripcion as sector, SUM(em.cantidad_operaciones) as cantidad_operaciones FROM empleado em
+              $consulta = $objetoAccesoDato->RetornarConsulta("SELECT te.descripcion as sector, SUM(em.cantidad_operaciones) as cantidad_operaciones FROM empleados em
                                                               INNER JOIN tipoempleado te on em.id_tipo_empleado = te.id_tipo_empleado
                                                               GROUP BY(te.descripcion)");
   
@@ -232,7 +232,7 @@ class Empleado
           try {
               $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
   
-              $consulta = $objetoAccesoDato->RetornarConsulta("SELECT te.descripcion as sector, em.nombre_empleado, em.id_empleado, 
+              $consulta = $objetoAccesoDato->RetornarConsulta("SELECT te.descripcion as sector, em.nombre_empleado as nombre, em.id_empleado as id, 
                                                               em.cantidad_operaciones as cantidad_operaciones FROM empleados em
                                                               INNER JOIN tipoempleado te on em.id_tipo_empleado = te.id_tipo_empleado WHERE te.descripcion = :sector");
   

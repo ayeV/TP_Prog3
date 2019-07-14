@@ -1,7 +1,8 @@
 {
     "require": {
         "slim/slim": "^3.12",
-        "firebase/php-jwt": "^5.0"
+        "firebase/php-jwt": "^5.0",
+        "phpoffice/phpspreadsheet": "^1.8"
     }
 	
 }

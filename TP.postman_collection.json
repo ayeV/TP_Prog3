@@ -1,0 +1,1320 @@
+{
+	"info": {
+		"_postman_id": "1714a903-4df6-44e7-a86c-44d071762cd5",
+		"name": "TP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RegistrarEmpleado",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjEyMjkzMjMsIm5iZiI6MTU2MTIyOTMyMywidXN1YXJpbyI6InNvY2lvMSIsInRpcG8iOiJTb2NpbyIsImlkIjo0LCJub21icmUiOiJNYXJpYSBEZWJpYW4ifQ.C7eogtI5afEwShEQHI9ym0OsHaqCJQO_SuU9-C_cSzI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "usuario",
+							"value": "cervecero1",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "cervecero1",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "Strauss",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "Cervecero",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjA3MTIyODcsIm5iZiI6MTU2MDcxMjI4NywidXN1YXJpbyI6InNvY2lvMSIsInRpcG8iOiJTb2NpbyIsImlkIjozLCJub21icmUiOiJNYXJpYSBEZWJpYW4ifQ.x5vIvJOH5UNGHi-TyMABkjecIOmRQjezhwmwOZpetVM",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tptest.dx.am/empleados/registrarEmpleado/",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"empleados",
+						"registrarEmpleado",
+						""
+					]
+				},
+				"description": "a"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "usuario",
+						"value": "socio3",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "clave",
+						"value": "socio3",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "usuario",
+							"value": "mozo1",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "mozo1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tptest.dx.am/empleados/login",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"empleados",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "usuario",
+						"value": "socio3",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "clave",
+						"value": "socio3",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "usuario",
+							"value": "mozo1",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "mozo1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tptest.dx.am/empleados/login",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"empleados",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Copy Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "usuario",
+						"value": "socio3",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "clave",
+						"value": "socio3",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "usuario",
+							"value": "mozo1",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "mozo1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tptest.dx.am/empleados/login",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"empleados",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListarEmpleados",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjA3MTM2MzIsIm5iZiI6MTU2MDcxMzYzMiwidXN1YXJpbyI6Im1vem8xIiwidGlwbyI6Ik1vem8iLCJpZCI6Niwibm9tYnJlIjoiSm9uIFNub3cifQ.0bIFNq_4L8yGMlU4vm38LAZJoxLYV7AVLK-_Xs9dTAA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost/TP_Prog3/Restaurante/index.php/empleados/listar",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"TP_Prog3",
+						"Restaurante",
+						"index.php",
+						"empleados",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SuspenderEmpleado",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjEzMTUzMjAsIm5iZiI6MTU2MTMxNTMyMCwidXN1YXJpbyI6InNvY2lvMSIsInRpcG8iOiJTb2NpbyIsImlkIjo0LCJub21icmUiOiJNYXJpYSBEZWJpYW4ifQ.e5ODgkJsvMGCzcn7kqTF2rCJlrC-rgPz4K91siupmjI"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://tptest.dx.am/empleados/suspender/usuario",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"empleados",
+						"suspender",
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AdjuntarFotoMesa",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjEzMTUzMjAsIm5iZiI6MTU2MTMxNTMyMCwidXN1YXJpbyI6InNvY2lvMSIsInRpcG8iOiJTb2NpbyIsImlkIjo0LCJub21icmUiOiJNYXJpYSBEZWJpYW4ifQ.e5ODgkJsvMGCzcn7kqTF2rCJlrC-rgPz4K91siupmjI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "codigoMesa",
+							"value": "MES02",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "/C:/xampp/htdocs/Modelo2doParcial/API/mesa-madera-pino-70.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tptest.dx.am/mesas/foto",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"mesas",
+						"foto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListarMesas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjEzMTg0MjMsIm5iZiI6MTU2MTMxODQyMywidXN1YXJpbyI6InNvY2lvMiIsInRpcG8iOiJTb2NpbyIsImlkIjo1LCJub21icmUiOiJKdWFuIFBlcmV6In0.zJT96xIJxybjqT-rcDGAfTleGfVlbGGRrqHwl7lM_EI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://tptest.dx.am/mesas/listar",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"mesas",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListarMenu",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjEzMTg0MjMsIm5iZiI6MTU2MTMxODQyMywidXN1YXJpbyI6InNvY2lvMiIsInRpcG8iOiJTb2NpbyIsImlkIjo1LCJub21icmUiOiJKdWFuIFBlcmV6In0.zJT96xIJxybjqT-rcDGAfTleGfVlbGGRrqHwl7lM_EI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://tptest.dx.am/menu/listar",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"menu",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistrarMenu",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjEzMTg0MjMsIm5iZiI6MTU2MTMxODQyMywidXN1YXJpbyI6InNvY2lvMiIsInRpcG8iOiJTb2NpbyIsImlkIjo1LCJub21icmUiOiJKdWFuIFBlcmV6In0.zJT96xIJxybjqT-rcDGAfTleGfVlbGGRrqHwl7lM_EI"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Tortilla de papas",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "250",
+							"type": "text"
+						},
+						{
+							"key": "sector",
+							"value": "Cocinero",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tptest.dx.am/menu/registrar",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"menu",
+						"registrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistrarPedido",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjEzMTk3MTUsIm5iZiI6MTU2MTMxOTcxNSwidXN1YXJpbyI6Im1vem8xIiwidGlwbyI6Ik1vem8iLCJpZCI6Nywibm9tYnJlIjoiU2Fuc2EgU3RhcmsifQ.rI78q98Hc3rIPjBh2PxUSNL_OlyHi1bFRKnC748dxrU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id_mesa",
+							"value": "MES03",
+							"type": "text"
+						},
+						{
+							"key": "id_menu",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "nombre_cliente",
+							"value": "cliente4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tptest.dx.am/pedido/registrar",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"pedido",
+						"registrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TomarPedido",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjE5MTY4NDIsIm5iZiI6MTU2MTkxNjg0MiwidXN1YXJpbyI6ImNlcnZlY2VybzEiLCJ0aXBvIjoiQ2VydmVjZXJvIiwiaWQiOjE0LCJub21icmUiOiJCZWVyIn0.e-Gp5YKNF3omem3-cDbqioxnqJ-ZQzJyEIG5mmvWrtg",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "codigo",
+							"value": "zo93a",
+							"type": "text"
+						},
+						{
+							"key": "minutosEstimados",
+							"value": "30",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tptest.dx.am/pedido/tomarPedido",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"pedido",
+						"tomarPedido"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CambiarEstadoMesaComiendo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjE5MTA4ODQsIm5iZiI6MTU2MTkxMDg4NCwidXN1YXJpbyI6Im1vem8xIiwidGlwbyI6Ik1vem8iLCJpZCI6Nywibm9tYnJlIjoiU2Fuc2EgU3RhcmsifQ.65dT190pF3UdUMkJ23ndbO9dtj6qsvD3megif5bklV4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "codigo",
+							"value": "MES03",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tptest.dx.am/mesas/mesas/estadoComiendo/MES02",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"mesas",
+						"mesas",
+						"estadoComiendo",
+						"MES02"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CambiarEstadoPedidoListoParaServir",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjE5MTY4NDIsIm5iZiI6MTU2MTkxNjg0MiwidXN1YXJpbyI6ImNlcnZlY2VybzEiLCJ0aXBvIjoiQ2VydmVjZXJvIiwiaWQiOjE0LCJub21icmUiOiJCZWVyIn0.e-Gp5YKNF3omem3-cDbqioxnqJ-ZQzJyEIG5mmvWrtg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "codigo",
+							"value": "zo93a",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tptest.dx.am/pedido/listoParaServir",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"pedido",
+						"listoParaServir"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ServirPedido",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjE5MTY5NDksIm5iZiI6MTU2MTkxNjk0OSwidXN1YXJpbyI6Im1vem8yIiwidGlwbyI6Ik1vem8iLCJpZCI6OCwibm9tYnJlIjoiUGVwZSJ9.RRNQwjRmz1tjjkCkZ366qR0g5n4Z3M8tc6_5ohhqC9U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "codigo",
+							"value": "zo93a",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tptest.dx.am/pedido/servir",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"pedido",
+						"servir"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistrarMesa",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjI2OTQ1NjUsIm5iZiI6MTU2MjY5NDU2NSwidXN1YXJpbyI6InNvY2lvMSIsInRpcG8iOiJTb2NpbyIsImlkIjo0LCJub21icmUiOiJNYXJpYSBEZWJpYW4ifQ.zyiQKHJMi8WJfBAGRLwRLoAKmYAp4-VONtulMiDor-o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "codigo",
+							"value": "MES04",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tptest.dx.am/mesas/registrar",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"mesas",
+						"registrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MesaEstadoPagando",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjE5MTA4ODQsIm5iZiI6MTU2MTkxMDg4NCwidXN1YXJpbyI6Im1vem8xIiwidGlwbyI6Ik1vem8iLCJpZCI6Nywibm9tYnJlIjoiU2Fuc2EgU3RhcmsifQ.65dT190pF3UdUMkJ23ndbO9dtj6qsvD3megif5bklV4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://tptest.dx.am/mesas/estadoPagando/MES02",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"mesas",
+						"estadoPagando",
+						"MES02"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cobrar",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjI2OTQ1NjUsIm5iZiI6MTU2MjY5NDU2NSwidXN1YXJpbyI6InNvY2lvMSIsInRpcG8iOiJTb2NpbyIsImlkIjo0LCJub21icmUiOiJNYXJpYSBEZWJpYW4ifQ.zyiQKHJMi8WJfBAGRLwRLoAKmYAp4-VONtulMiDor-o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://tptest.dx.am/mesas/cobrar/MES04",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"mesas",
+						"cobrar",
+						"MES04"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListarpedidoPorMesa",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjI2OTQ1NjUsIm5iZiI6MTU2MjY5NDU2NSwidXN1YXJpbyI6InNvY2lvMSIsInRpcG8iOiJTb2NpbyIsImlkIjo0LCJub21icmUiOiJNYXJpYSBEZWJpYW4ifQ.zyiQKHJMi8WJfBAGRLwRLoAKmYAp4-VONtulMiDor-o",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://tptest.dx.am/pedido/listarPorMesa/MES05",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"pedido",
+						"listarPorMesa",
+						"MES05"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GenerarFacturaPDF",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjI2OTQ1NjUsIm5iZiI6MTU2MjY5NDU2NSwidXN1YXJpbyI6InNvY2lvMSIsInRpcG8iOiJTb2NpbyIsImlkIjo0LCJub21icmUiOiJNYXJpYSBEZWJpYW4ifQ.zyiQKHJMi8WJfBAGRLwRLoAKmYAp4-VONtulMiDor-o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://tptest.dx.am/factura/listarVentasPDF",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"factura",
+						"listarVentasPDF"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GenerarFacturaExcel",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjI2OTQ1NjUsIm5iZiI6MTU2MjY5NDU2NSwidXN1YXJpbyI6InNvY2lvMSIsInRpcG8iOiJTb2NpbyIsImlkIjo0LCJub21icmUiOiJNYXJpYSBEZWJpYW4ifQ.zyiQKHJMi8WJfBAGRLwRLoAKmYAp4-VONtulMiDor-o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://tptest.dx.am/factura/listarVentasExcel",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"factura",
+						"listarVentasExcel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar todos los pedidos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjMxMTk2NzAsIm5iZiI6MTU2MzExOTY3MCwidXN1YXJpbyI6InNvY2lvMiIsInRpcG8iOiJTb2NpbyIsImlkIjo1LCJub21icmUiOiJKdWFuIFBlcmV6In0.ChjRuWWUR-Vymhh9c4vkM_zNU6qy1vp_jDnI6pVZhNE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://tptest.dx.am/pedido/listarTodos/",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"pedido",
+						"listarTodos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancelar pedido",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjMxMTk4MjYsIm5iZiI6MTU2MzExOTgyNiwidXN1YXJpbyI6Im1vem8xIiwidGlwbyI6Ik1vem8iLCJpZCI6Nywibm9tYnJlIjoiU2Fuc2EgU3RhcmsifQ.pld0NdKLr_eZBxSy8knS5N76n5BytTVpQ1KnHtrv-BI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "codigo",
+							"value": "w551a",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tptest.dx.am/pedido/w551a",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"pedido",
+						"w551a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListarPedidosCancelados",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjMxMTk2NzAsIm5iZiI6MTU2MzExOTY3MCwidXN1YXJpbyI6InNvY2lvMiIsInRpcG8iOiJTb2NpbyIsImlkIjo1LCJub21icmUiOiJKdWFuIFBlcmV6In0.ChjRuWWUR-Vymhh9c4vkM_zNU6qy1vp_jDnI6pVZhNE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://tptest.dx.am/pedido/listarCancelados",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"pedido",
+						"listarCancelados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListarPedidosPorFecha",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjMxMTk2NzAsIm5iZiI6MTU2MzExOTY3MCwidXN1YXJpbyI6InNvY2lvMiIsInRpcG8iOiJTb2NpbyIsImlkIjo1LCJub21icmUiOiJKdWFuIFBlcmV6In0.ChjRuWWUR-Vymhh9c4vkM_zNU6qy1vp_jDnI6pVZhNE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fecha",
+							"value": "2019-06-30",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tptest.dx.am/pedido/listarTodosPorFecha",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"pedido",
+						"listarTodosPorFecha"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistrarEncuesta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "puntuacionMesa",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "codigoMesa",
+							"value": "MES01",
+							"type": "text"
+						},
+						{
+							"key": "puntuacionRestaurante",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "puntuacionMozo",
+							"value": "7",
+							"type": "text"
+						},
+						{
+							"key": "puntuacionCocinero",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "comentario",
+							"value": "comentario prueba",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tptest.dx.am/encuesta/registrar",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"encuesta",
+						"registrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListarEncuestas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjMxMTk2NzAsIm5iZiI6MTU2MzExOTY3MCwidXN1YXJpbyI6InNvY2lvMiIsInRpcG8iOiJTb2NpbyIsImlkIjo1LCJub21icmUiOiJKdWFuIFBlcmV6In0.ChjRuWWUR-Vymhh9c4vkM_zNU6qy1vp_jDnI6pVZhNE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://tptest.dx.am/encuesta/listar",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"encuesta",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListarPedidosActivos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjMxMTk2NzAsIm5iZiI6MTU2MzExOTY3MCwidXN1YXJpbyI6InNvY2lvMiIsInRpcG8iOiJTb2NpbyIsImlkIjo1LCJub21icmUiOiJKdWFuIFBlcmV6In0.ChjRuWWUR-Vymhh9c4vkM_zNU6qy1vp_jDnI6pVZhNE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://tptest.dx.am/pedido/listarActivos",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"pedido",
+						"listarActivos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListarEncuestaEntreFechas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjMxMTk2NzAsIm5iZiI6MTU2MzExOTY3MCwidXN1YXJpbyI6InNvY2lvMiIsInRpcG8iOiJTb2NpbyIsImlkIjo1LCJub21icmUiOiJKdWFuIFBlcmV6In0.ChjRuWWUR-Vymhh9c4vkM_zNU6qy1vp_jDnI6pVZhNE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fecha1",
+							"value": "2019-07-14 14:53:09",
+							"type": "text"
+						},
+						{
+							"key": "fecha2",
+							"value": "2019-07-14 14:59:09",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tptest.dx.am/encuesta/listarEntreFechas",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"encuesta",
+						"listarEntreFechas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PedidoMasVendido",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjMxMTk2NzAsIm5iZiI6MTU2MzExOTY3MCwidXN1YXJpbyI6InNvY2lvMiIsInRpcG8iOiJTb2NpbyIsImlkIjo1LCJub21icmUiOiJKdWFuIFBlcmV6In0.ChjRuWWUR-Vymhh9c4vkM_zNU6qy1vp_jDnI6pVZhNE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://tptest.dx.am/pedido/MasVendido",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"pedido",
+						"MasVendido"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PedidosMenosVendidos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjMxMTk2NzAsIm5iZiI6MTU2MzExOTY3MCwidXN1YXJpbyI6InNvY2lvMiIsInRpcG8iOiJTb2NpbyIsImlkIjo1LCJub21icmUiOiJKdWFuIFBlcmV6In0.ChjRuWWUR-Vymhh9c4vkM_zNU6qy1vp_jDnI6pVZhNE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://tptest.dx.am/pedido/MenosVendido",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"pedido",
+						"MenosVendido"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CantOperacionesPorSector",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjMxMTk2NzAsIm5iZiI6MTU2MzExOTY3MCwidXN1YXJpbyI6InNvY2lvMiIsInRpcG8iOiJTb2NpbyIsImlkIjo1LCJub21icmUiOiJKdWFuIFBlcmV6In0.ChjRuWWUR-Vymhh9c4vkM_zNU6qy1vp_jDnI6pVZhNE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://tptest.dx.am/empleados/cantidadOperacionesPorSector",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"empleados",
+						"cantidadOperacionesPorSector"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CantOperacionesPorSector",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjMxMTk2NzAsIm5iZiI6MTU2MzExOTY3MCwidXN1YXJpbyI6InNvY2lvMiIsInRpcG8iOiJTb2NpbyIsImlkIjo1LCJub21icmUiOiJKdWFuIFBlcmV6In0.ChjRuWWUR-Vymhh9c4vkM_zNU6qy1vp_jDnI6pVZhNE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "sector",
+							"value": "Bartender",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "sector",
+							"value": "Socio",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "sector",
+							"value": "Cocinero",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "sector",
+							"value": "Cervecero",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "sector",
+							"value": "Mozo",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tptest.dx.am/empleados/cantidadOperacionesEmpleadosPorSector",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"empleados",
+						"cantidadOperacionesEmpleadosPorSector"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListarLoginEntreFechas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjMxMTk2NzAsIm5iZiI6MTU2MzExOTY3MCwidXN1YXJpbyI6InNvY2lvMiIsInRpcG8iOiJTb2NpbyIsImlkIjo1LCJub21icmUiOiJKdWFuIFBlcmV6In0.ChjRuWWUR-Vymhh9c4vkM_zNU6qy1vp_jDnI6pVZhNE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fecha1",
+							"value": "2019-06-22 15:48:25",
+							"type": "text"
+						},
+						{
+							"key": "fecha2",
+							"value": "2019-07-29 15:48:25",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tptest.dx.am/empleados/listarEntreFechasLogin",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"empleados",
+						"listarEntreFechasLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListarRegistroEntreFechas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjMxMTk2NzAsIm5iZiI6MTU2MzExOTY3MCwidXN1YXJpbyI6InNvY2lvMiIsInRpcG8iOiJTb2NpbyIsImlkIjo1LCJub21icmUiOiJKdWFuIFBlcmV6In0.ChjRuWWUR-Vymhh9c4vkM_zNU6qy1vp_jDnI6pVZhNE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fecha1",
+							"value": "2019-06-22 15:48:25",
+							"type": "text"
+						},
+						{
+							"key": "fecha2",
+							"value": "2019-07-29 15:48:25",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tptest.dx.am/empleados/listarEntreFechasRegistro",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"empleados",
+						"listarEntreFechasRegistro"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

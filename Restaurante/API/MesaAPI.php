@@ -1,8 +1,7 @@
 <?php
 include_once("Entidades/Token.php");
 include_once("Entidades/Mesa.php");
-include_once("Entidades/Foto.php");
-class MesaApi extends Mesa{  
+include_once("Entidades/Foto.php");class MesaApi extends Mesa{  
     ///Registro de nuevos empleados.
     public function RegistrarMesa($request, $response, $args){
         $parametros = $request->getParsedBody();
