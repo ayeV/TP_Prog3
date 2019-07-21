@@ -648,7 +648,7 @@
 					"formdata": [
 						{
 							"key": "codigo",
-							"value": "MES04",
+							"value": "MES09",
 							"type": "text"
 						}
 					]
@@ -681,7 +681,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://tptest.dx.am/mesas/estadoPagando/MES02",
+					"raw": "http://tptest.dx.am/mesas/estadoPagando/MES05",
 					"protocol": "http",
 					"host": [
 						"tptest",
@@ -691,7 +691,7 @@
 					"path": [
 						"mesas",
 						"estadoPagando",
-						"MES02"
+						"MES05"
 					]
 				}
 			},
@@ -1311,6 +1311,55 @@
 					"path": [
 						"empleados",
 						"listarEntreFechasRegistro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://tptest.dx.am/factura/listarVentasPDF",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://tptest.dx.am/factura/listarVentasPDF",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"factura",
+						"listarVentasPDF"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://tptest.dx.am/mesas/cobrar/MES02",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjI2OTYxNTYsIm5iZiI6MTU2MjY5NjE1NiwidXN1YXJpbyI6Im1vem8xIiwidGlwbyI6Ik1vem8iLCJpZCI6Nywibm9tYnJlIjoiU2Fuc2EgU3RhcmsifQ.rgFic0Wx7SdGoJu7y7MO8IUSdQ9PduKgf3xZOZegAxE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://tptest.dx.am/mesas/cobrar/MES02",
+					"protocol": "http",
+					"host": [
+						"tptest",
+						"dx",
+						"am"
+					],
+					"path": [
+						"mesas",
+						"cobrar",
+						"MES02"
 					]
 				}
 			},
