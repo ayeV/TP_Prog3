@@ -6,3 +6,6 @@ bd
 name:
 3073018_lacomanda
 psswd: lacomandapasswd1
+
+
+https://cp1.awardspace.net/beta/database-manager/#mysql-databases
